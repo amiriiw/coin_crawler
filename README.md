@@ -18,7 +18,5 @@ This project are create by scrapy library for collect the information about coin
 
 point: this project is new started so we dont work on project speed part.
 
-
 ## offer:
 Read the md files to get good information about the libraries used.
-
