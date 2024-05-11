@@ -7,7 +7,6 @@ This project are create by scrapy library for collect the information about coin
 #### in this project we use below libraries:
 
 - scrapy
-- asyncio
 - flask
 - json
 - os 
