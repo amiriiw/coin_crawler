@@ -8,8 +8,8 @@ This project are create by scrapy library for collect the information about coin
 
 <a href="https://github.com/maskiiw"><img alt="scrapy" src="https://img.shields.io/badge/scrapy-60A839?style=for-the-badge&logo=scrapy&logoColor=f5f5f5"></a>
 <a href="https://github.com/maskiiw"><img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=f5f5f5"></a>
-<a href="https://github.com/maskiiw"><img alt="json" src="https://img.shields.io/badge/json-000000?style=for-the-badge&logo=json&logoColor=f5f5f5"></a>
-
+<a href="https://github.com/maskiiw"><img alt="os" src="https://img.shields.io/badge/os-000000?style=for-the-badge"></a>
+<a href="https://github.com/maskiiw"><img alt="requests" src="https://img.shields.io/badge/request-000000?style=for-the-badge"></a>
 - os 
 - requests
 - sys
