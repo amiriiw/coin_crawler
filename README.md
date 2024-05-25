@@ -1,4 +1,4 @@
-# coin-crawler
+# coin_crawler
 This project are create by scrapy library for collect the information about coins use it to see what will happen.
 
 #### in this project we use below libraries:
