@@ -1,5 +1,5 @@
 # coin_crawler
-This project are create by scrapy library for collect the information about coins use it to see what will happen.
+This basic project are create by scrapy library for collect the information about coins use it to see what will happen.
 
 #### in this project we use below libraries:
 <a href="https://github.com/maskiiw"><img alt="scrapy" src="https://img.shields.io/badge/scrapy-60A839?style=for-the-badge&logo=scrapy&logoColor=f5f5f5"></a>
