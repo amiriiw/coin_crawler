@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: "Source Code Pro";
+    font-style: normal;
+    background-color: #292929;
+    color: #efefef;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+body.result{
+align-items: start;
+}
+
+form{
+    max-width: 50%;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.inputs{
+    width: 100%;
+    margin-bottom: 8%;
+    display: flex;  
+    justify-content: space-around;
+}
+
+.inputs button{
+    width: 6%;
+}
+
+.inputs input[type="text"]{
+    width: 90%;
+    background-color: transparent;
+    border-bottom: 2px solid #efefef;
+    color: #efefef; 
+    padding: 8px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.inputs input[type="text"]::placeholder{
+    color: #efefef;
+    opacity: .6;
+}
+
+ul{
+    padding-left: 16px;
+    padding-top: 10px;
+}
+
+.crypto_name{
+    margin-top: 10px;
+}
