@@ -1,5 +1,5 @@
 """----------------------------------------------------------------------------------------------------
-well come, this is maskiiw, this is a simple project about scrapy crawler.
+well come, this is amiriiw, this is a simple project about scrapy crawler.
     in this project we will crawl all data about all cryptos from coinmarketcap.
         this file is web service side.
 ----------------------------------------------------------------------------------------------------"""
