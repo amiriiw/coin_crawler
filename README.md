@@ -14,6 +14,10 @@ This basic project for showing how scrapy crawler and flask web service work for
 
 <img src="https://github.com/amiriiw/coin_crawler/blob/main/Coin%20crawler/imgs/crawl_coin.png" alt="Image 1" width="300" height="200"> <img src="https://github.com/amiriiw/coin_crawler/blob/main/Coin%20crawler/imgs/crawl_option.png" alt="Image 2" width="300" height="200">
 
+**output images**
+
+<img src="https://github.com/amiriiw/coin_crawler/blob/main/Coin%20crawler/imgs/result_coin.png" alt="Image 1" width="300" height="200"> <img src="https://github.com/amiriiw/coin_crawler/blob/main/Coin%20crawler/imgs/result_option.png" alt="Image 2" width="300" height="200">
+
 
 
 ## How you should use the src:
