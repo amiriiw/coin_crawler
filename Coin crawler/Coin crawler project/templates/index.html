@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container group-crawl-container">
+        <form action="/" method="POST">
+            <h1>Select option</h1>
+            <select name="options">
+                <option value="new crypto">New Crypto</option>
+                <option value="most view crypto">Most View Crypto</option>
+                <option value="trend crypto">Trend Crypto</option>
+                <option value="gain and lose">Gain and Lose</option>
+                <option value="coin list">Coin List</option>
+            </select>
+            <button type="submit">Crawl</button>
+        </form>
+    </div>
+    <div class="form-container single-crawl-container">
+        <form action="/" method="POST">
+            <h1>Crawl a coin</h1>
+            <input type="text" name="coin_name" placeholder="Coin Name" />
+            <button type="submit">Crawl</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Crawl coin!</h1>
+                <p>To get full information of a coin use this part.</p>
+                <button class="ghost" id="groupCrawl">Single Crawl</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Crawl group of coins!</h1>
+                <p>To crawl group of coins you can use this part.</p>
+                <button class="ghost" id="singleCrawl">Group Crawl</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const singleCrawlButton = document.getElementById('singleCrawl');
+    const groupCrawlButton = document.getElementById('groupCrawl');
+    const container = document.getElementById('container');
+
+    singleCrawlButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    groupCrawlButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+</body>
+</html>

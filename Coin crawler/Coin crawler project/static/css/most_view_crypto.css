@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: #000000;
+}
+h1, h2 {
+    color: #000000;
+}
+.container {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.crypto-list {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 700px;
+    overflow: auto;
+}
+.crypto-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.crypto-list th, .crypto-list td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: #000000;
+}
+.crypto-list th {
+    background-color: #333333;
+    color: #FFFFFF;
+}
