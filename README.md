@@ -4,10 +4,10 @@ This basic project for showing how scrapy crawler and flask web service work for
 #### in this project we use below libraries:
 <a href="https://github.com/amiriiw"><img alt="scrapy" src="https://img.shields.io/badge/scrapy-60A839?style=for-the-badge&logo=scrapy&logoColor=f5f5f5"></a>
 <a href="https://github.com/amiriiw"><img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=f5f5f5"></a>
-<a href="https://github.com/amiriiw"><img alt="os" src="https://img.shields.io/badge/os-B10000?style=for-the-badge"></a>
 <a href="https://github.com/amiriiw"><img alt="requests" src="https://img.shields.io/badge/requests-333333?style=for-the-badge"></a>
-<a href="https://github.com/amiriiw"><img alt="sys" src="https://img.shields.io/badge/sys-4951F5?style=for-the-badge"></a>
 <a href="https://github.com/amiriiw"><img alt="time" src="https://img.shields.io/badge/time-B366F6?style=for-the-badge"></a>
+<a href="https://github.com/amiriiw"><img alt="sys" src="https://img.shields.io/badge/sys-4951F5?style=for-the-badge"></a>
+<a href="https://github.com/amiriiw"><img alt="os" src="https://img.shields.io/badge/os-B10000?style=for-the-badge"></a>
 
 ## How you should use the src:
 1 - use the comand "pip3 install -r requirements.txt"
