@@ -21,7 +21,7 @@ This basic project for showing how scrapy crawler and flask web service work for
 
 
 ## How you should use the src:
-1 - use the comand "pip3 install -r requirements.txt"
+1 - use the comamnd "pip3 install -r requirements.txt"
 
 2- run the file named coin_crawler_app.py 
 
