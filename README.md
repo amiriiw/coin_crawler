@@ -85,10 +85,15 @@ To use this project, follow these steps:
 
 Here are some sample images from the project:
 
-![Sample Image 1](imgs/crawl_coin.png)
-![Sample Image 2](imgs/crawl_option.png)
-![Sample Image 3](imgs/result_coin.png)
-![Sample Image 4](imgs/result_option.png)
+<p align="center">
+  <img src="imgs/crawl_coin.png" alt="Sample Image 1" width="300" height="400"/>
+  <img src="imgs/crawl_option.png" alt="Sample Image 2" width="300" height="400"/>
+</p>
+<p align="center">
+  <img src="imgs/result_coin.png" alt="Sample Image 3" width="300" height="400"/>
+  <img src="imgs/result_option.png" alt="Sample Image 4" width="300" height="400"/>
+</p>
+
 
 ## License
 
