@@ -85,10 +85,10 @@ To use this project, follow these steps:
 
 Here are some sample images from the project:
 
-![Sample Image 1](path_to_image_1)
-![Sample Image 2](path_to_image_2)
-![Sample Image 3](path_to_image_3)
-![Sample Image 4](path_to_image_4)
+![Sample Image 1](Coin crawler/imgs/crawl_coin.png)
+![Sample Image 2](Coin crawler/imgs/crawl_option.png)
+![Sample Image 3](Coin crawler/imgs/result_coin.png)
+![Sample Image 4](Coin crawler/imgs/result_option.png)
 
 ## License
 
