@@ -86,12 +86,12 @@ To use this project, follow these steps:
 Here are some sample images from the project:
 
 <p align="center">
-  <img src="imgs/crawl_coin.png" alt="Sample Image 1" width="300" height="400"/>
-  <img src="imgs/crawl_option.png" alt="Sample Image 2" width="300" height="400"/>
+  <img src="imgs/crawl_coin.png" alt="Sample Image 1" width="400" height="300"/>
+  <img src="imgs/crawl_option.png" alt="Sample Image 2" width="400" height="300"/>
 </p>
 <p align="center">
-  <img src="imgs/result_coin.png" alt="Sample Image 3" width="300" height="400"/>
-  <img src="imgs/result_option.png" alt="Sample Image 4" width="300" height="400"/>
+  <img src="imgs/result_coin.png" alt="Sample Image 3" width="400" height="300"/>
+  <img src="imgs/result_option.png" alt="Sample Image 4" width="400" height="300"/>
 </p>
 
 
