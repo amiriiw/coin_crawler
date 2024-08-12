@@ -25,14 +25,14 @@ The following libraries are used in this project:
 
 ## Detailed Explanation
 
-### coin_crawler_app.py
+### `coin_crawler_app.py`
 This is the web service side of the project, allowing users to interact with the cryptocurrency crawler through a web interface. The key components of the script are:
 
 - **FlaskLibrary Class**: This class manages the web application. The main methods include:
   - `get_crypto_name()`: Handles user requests, retrieves the selected option, and triggers the appropriate crawler script based on user input. It then renders the scraped data in the corresponding HTML template.
   - `run()`: Starts the Flask web service.
 
-### coin_crawler_all_coins.py
+### `coin_crawler_all_coins.py`
 This script crawls and scrapes data for all cryptocurrencies under different categories such as "new crypto," "most viewed crypto," etc. The key components of the script are:
 
 - **CryptoInfo Class**: This is the main Scrapy spider that handles the crawling process. The key methods include:
@@ -41,7 +41,7 @@ This script crawls and scrapes data for all cryptocurrencies under different cat
   - `start_requests()`: Sends requests to the starting URLs with appropriate headers.
   - `parse()`: Parses the response based on the category and saves the scraped data to a JSON file.
 
-### coin_crawler_single_coin.py
+### `coin_crawler_single_coin.py`
 This script is used to crawl and scrape data for a specific cryptocurrency. The key components of the script are:
 
 - **CryptoInfo Class**: Similar to the `coin_crawler_all_coins.py` script but focused on a single cryptocurrency. The key methods include:
