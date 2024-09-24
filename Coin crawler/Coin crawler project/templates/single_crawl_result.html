@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.name }} Info</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background: #222222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            margin: 70px 0 50px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 100;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            margin: 20px 0 30px;
+            color: #000000;
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        button {
+            border-radius: 20px;
+            border: 1px solid #333333;
+            background-color: #333333;
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 12px 45px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        button:focus {
+            outline: none;
+        }
+        button.ghost {
+            background-color: transparent;
+            border-color: #FFFFFF;
+        }
+        form {
+            background-color: #EEEEEE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 50px;
+            height: 100%;
+            text-align: center;
+        }
+        input, select {
+            background-color: #CCCCCC;
+            border: none;
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 100%;
+        }
+        .container {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                        0 10px 10px rgba(0,0,0,0.22);
+            position: relative;
+            overflow: hidden;
+            width: 768px;
+            max-width: 100%;
+            min-height: 480px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #FFFFFF;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            margin-right: 20px;
+        }
+        .header .price {
+            font-size: 24px;
+            color: #000000;
+        }
+        .about, .news, .analytics {
+            max-height: 150px;
+            overflow-y: auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .markets {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-height: 700px;
+            overflow: auto;
+        }
+        .markets table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .markets th, .markets td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            color: #000000;
+        }
+        .markets th {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img id="logo" src="{{ data.logo }}" alt="Logo">
+        <div>
+            <h1 id="name">{{ data.name }}</h1>
+            <p class="price" id="price">{{ data.price }}</p>
+            <p>24h Change: <span id="change">{{ data['24hour change'] }}</span></p>
+            <p>24h Low: <span id="low">{{ data['lower price in 24 hour'] }}</span></p>
+            <p>24h High: <span id="high">{{ data['higher price in 24 hour'] }}</span></p>
+            <p>All Time High: <span id="ath">{{ data['all time-high'] }}</span></p>
+            <p>All Time Low: <span id="atl">{{ data['all time-low'] }}</span></p>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Coin</h2>
+        <p id="about">{{ data['about coin'] }}</p>
+    </div>
+    <div class="markets">
+        <h2>Markets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Exchange</th>
+                    <th>Pair</th>
+                    <th>Price</th>
+                    <th>Volume (24h)</th>
+                </tr>
+            </thead>
+            <tbody id="market-table">
+                {% for market in data.markets %}
+                <tr>
+                    <td>{{ market.rank }}</td>
+                    <td>{{ market.exchangeName }}</td>
+                    <td><a href="{{ market.marketUrl }}" target="_blank">{{ market.marketPair }}</a></td>
+                    <td>{{ market.price }}</td>
+                    <td>{{ market.volumeUsd }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="news">
+        <h2>News</h2>
+        <div id="news">
+            {% if data.news.status.error_code != "500" %}
+                {% for article in data.news %}
+                <p>{{ article.title }} - <a href="{{ article.url }}" target="_blank">Read more</a></p>
+                {% endfor %}
+            {% else %}
+                <p>Error: {{ data.news.status.error_message }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="analytics">
+        <h2>Analytics</h2>
+        <div id="analytics">
+            {% if data.analytics.status.error_code != "500" %}
+                {% for analysis in data.analytics %}
+                <p>{{ analysis.title }} - <a href="{{ analysis.url }}" target="_blank">Read more</a></p>
+                {% endfor %}
+            {% else %}
+                <p>Error: {{ data.analytics.status.error_message }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
