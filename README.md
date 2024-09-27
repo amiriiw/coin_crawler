@@ -9,13 +9,12 @@ This project consists of three main components:
 - **coin_crawler_app.py**: This is the web service component that allows users to select and retrieve cryptocurrency data via a web interface.
 - **coin_crawler_all_coins.py**: This script is responsible for crawling and scraping data for all cryptocurrencies based on different categories.
 - **coin_crawler_single_coin.py**: This script is used to crawl and scrape data for a specific cryptocurrency.
-## 📂 ساختار پروژه
+
 ```plaintext
 coin_crawler/
 ├── backend/
 │   ├── coin_crawler_all_coins.py    
-│   ├── coin_crawler_single_coin.py  
-├── static/                           
+│   ├── coin_crawler_single_coin.py                            
 ├── templates/                       
 │   ├── coin_list.html              
 │   ├── gain_and_lose.html           
