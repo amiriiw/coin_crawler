@@ -81,20 +81,6 @@ To use this project, follow these steps:
 
 4. Open your web browser and go to `http://localhost:5000` to interact with the coin crawler.
 
-## Sample Images
-
-Here are some sample images from the project:
-
-<p align="center">
-  <img src="imgs/crawl_coin.png" alt="Sample Image 1" width="400" height="300"/>
-  <img src="imgs/crawl_option.png" alt="Sample Image 2" width="400" height="300"/>
-</p>
-<p align="center">
-  <img src="imgs/result_coin.png" alt="Sample Image 3" width="400" height="300"/>
-  <img src="imgs/result_option.png" alt="Sample Image 4" width="400" height="300"/>
-</p>
-
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
