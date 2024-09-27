@@ -36,10 +36,10 @@ The following libraries are used in this project:
 - **[sys](https://docs.python.org/3/library/sys.html)**: Used for accessing system-specific parameters and functions.
 - **[Flask](https://flask.palletsprojects.com/)**: Used for creating the web service and rendering templates.
 - **[os](https://docs.python.org/3/library/os.html)**: Used for interacting with the operating system.
+- **[Scrapy](https://scrapy.org/)**: Used for web crawling and data scraping.
+- **[requests](https://docs.python-requests.org/)**: Used for making HTTP requests.
 - **[time](https://docs.python.org/3/library/time.html)**: Used for time-related functions.
 - **[json](https://docs.python.org/3/library/json.html)**: Used for handling JSON data.
-- **[requests](https://docs.python-requests.org/)**: Used for making HTTP requests.
-- **[Scrapy](https://scrapy.org/)**: Used for web crawling and data scraping.
 
 ## Detailed Explanation
 
