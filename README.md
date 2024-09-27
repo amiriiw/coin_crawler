@@ -89,12 +89,12 @@ To use this project, follow these steps:
 
 2. Install the required libraries:
     ```bash
-    pip install Flask Scrapy scrapy-splash requests
+    pip3 install -r requirements.txt
     ```
 
 3. Start the web service:
     ```bash
-    python coin_crawler_app.py
+    python3 coin_crawler_app.py
     ```
 
 4. Open your web browser and go to `http://localhost:5000` to interact with the coin crawler.
