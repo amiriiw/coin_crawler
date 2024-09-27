@@ -1,4 +1,0 @@
-flask
-scrapy
-requests
-scrapy_splash
