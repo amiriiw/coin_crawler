@@ -1,9 +1,7 @@
 # Coin Crawler Project
-
 Welcome to the Coin Crawler Project! This project is designed to crawl and scrape data about various cryptocurrencies from CoinMarketCap using the Scrapy framework and a Flask web service.
 
 ## Overview
-
 This project consists of three main components:
 
 - **coin_crawler_app.py**: This is the web service component that allows users to select and retrieve cryptocurrency data via a web interface.
@@ -24,12 +22,10 @@ coin_crawler/
 │   ├── single_crawl_result.html     
 │   ├── trend_crypto.html            
 ├── coin_crawler_app.py             
-├── requirements.txt                 
-├── README.md                       
+├── requirements.txt                                        
 ```
 
 ## Libraries Used
-
 The following libraries are used in this project:
 
 - **[Scrapy-Splash](https://github.com/scrapy-plugins/scrapy-splash)**: Used for handling JavaScript-rendered pages in Scrapy.
@@ -68,7 +64,6 @@ This script is used to crawl and scrape data for a specific cryptocurrency. The 
   - `parse()`: Parses the response to extract relevant data such as price, 24-hour change, all-time high/low, and more.
 
 ## How It Works
-
 ### Web Service:
 - The `coin_crawler_app.py` script starts a Flask web service that allows users to select a category or enter a specific cryptocurrency name.
 - Based on the user's selection, the appropriate crawler script (`coin_crawler_all_coins.py` or `coin_crawler_single_coin.py`) is executed.
@@ -78,7 +73,6 @@ This script is used to crawl and scrape data for a specific cryptocurrency. The 
 - The crawler scripts (`coin_crawler_all_coins.py` and `coin_crawler_single_coin.py`) send requests to CoinMarketCap, scrape the data, and save it as a JSON file.
 
 ## Installation and Setup
-
 To use this project, follow these steps:
 
 1. Clone the repository:
@@ -100,5 +94,6 @@ To use this project, follow these steps:
 4. Open your web browser and go to `http://localhost:5000` to interact with the coin crawler.
 
 ## License
-
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
