@@ -79,6 +79,8 @@ To use this project, follow these steps:
     ```bash
     git clone https://github.com/amiriiw/coin_crawler
     cd coin_crawler
+    cd Coin/ crawler
+    cd Coin/ crawler/ project
     ```
 
 2. Install the required libraries:
