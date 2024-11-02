@@ -1,101 +1,151 @@
-# Coin Crawler Project
-Welcome to the Coin Crawler Project! This project is designed to crawl and scrape data about various cryptocurrencies from CoinMarketCap using the Scrapy framework and a Flask web service.
+# Coin Crawler
 
-## Overview
-This project consists of three main components:
+> A cryptocurrency data scraping and web application built with Flask and Scrapy. This project collects cryptocurrency data from CoinMarketCap and serves it through a Flask-based web application, allowing users to view various crypto trends, newly listed coins, top gainers/losers, and specific coin details.
 
-- **coin_crawler_app.py**: This is the web service component that allows users to select and retrieve cryptocurrency data via a web interface.
-- **coin_crawler_all_coins.py**: This script is responsible for crawling and scraping data for all cryptocurrencies based on different categories.
-- **coin_crawler_single_coin.py**: This script is used to crawl and scrape data for a specific cryptocurrency.
+## Table of Contents
 
-```plaintext
-coin_crawler/
-├── backend/
-│   ├── coin_crawler_all_coins.py    
-│   ├── coin_crawler_single_coin.py                            
-├── templates/                       
-│   ├── coin_list.html              
-│   ├── gain_and_lose.html           
-│   ├── index.html                   
-│   ├── most_view_crypto.html        
-│   ├── new_crypto.html              
-│   ├── single_crawl_result.html     
-│   ├── trend_crypto.html            
-├── coin_crawler_app.py             
-├── requirements.txt                                        
-```
-
-## Libraries Used
-The following libraries are used in this project:
-
-- **[Scrapy-Splash](https://github.com/scrapy-plugins/scrapy-splash)**: Used for handling JavaScript-rendered pages in Scrapy.
-- **[sys](https://docs.python.org/3/library/sys.html)**: Used for accessing system-specific parameters and functions.
-- **[Flask](https://flask.palletsprojects.com/)**: Used for creating the web service and rendering templates.
-- **[os](https://docs.python.org/3/library/os.html)**: Used for interacting with the operating system.
-- **[Scrapy](https://scrapy.org/)**: Used for web crawling and data scraping.
-- **[requests](https://docs.python-requests.org/)**: Used for making HTTP requests.
-- **[time](https://docs.python.org/3/library/time.html)**: Used for time-related functions.
-- **[json](https://docs.python.org/3/library/json.html)**: Used for handling JSON data.
-
-## Detailed Explanation
-
-### `coin_crawler_app.py`
-This is the web service side of the project, allowing users to interact with the cryptocurrency crawler through a web interface. The key components of the script are:
-
-- **FlaskLibrary Class**: This class manages the web application. The main methods include:
-  - `get_crypto_name()`: Handles user requests, retrieves the selected option, and triggers the appropriate crawler script based on user input. It then renders the scraped data in the corresponding HTML template.
-  - `run()`: Starts the Flask web service.
-
-### `coin_crawler_all_coins.py`
-This script crawls and scrapes data for all cryptocurrencies under different categories such as "new crypto," "most viewed crypto," etc. The key components of the script are:
-
-- **CryptoInfo Class**: This is the main Scrapy spider that handles the crawling process. The key methods include:
-  - `__init__()`: Initializes the spider with the category to crawl.
-  - `get_start_urls()`: Returns the starting URLs based on the category.
-  - `start_requests()`: Sends requests to the starting URLs with appropriate headers.
-  - `parse()`: Parses the response based on the category and saves the scraped data to a JSON file.
-
-### `coin_crawler_single_coin.py`
-This script is used to crawl and scrape data for a specific cryptocurrency. The key components of the script are:
-
-- **CryptoInfo Class**: Similar to the `coin_crawler_all_coins.py` script but focused on a single cryptocurrency. The key methods include:
-  - `__init__()`: Initializes the spider with the cryptocurrency name.
-  - `start_requests()`: Sends requests to the URL of the specified cryptocurrency.
-  - `parse()`: Parses the response to extract relevant data such as price, 24-hour change, all-time high/low, and more.
-
-## How It Works
-### Web Service:
-- The `coin_crawler_app.py` script starts a Flask web service that allows users to select a category or enter a specific cryptocurrency name.
-- Based on the user's selection, the appropriate crawler script (`coin_crawler_all_coins.py` or `coin_crawler_single_coin.py`) is executed.
-- The results are displayed on a web page.
-
-### Data Crawling:
-- The crawler scripts (`coin_crawler_all_coins.py` and `coin_crawler_single_coin.py`) send requests to CoinMarketCap, scrape the data, and save it as a JSON file.
-
-## Installation and Setup
-To use this project, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/amiriiw/coin_crawler
-    cd coin_crawler
-    cd Coin/ crawler
-    cd Coin/ crawler/ project
-    ```
-
-2. Install the required libraries:
-    ```bash
-    pip3 install -r requirements.txt
-    ```
-
-3. Start the web service:
-    ```bash
-    python3 coin_crawler_app.py
-    ```
-
-4. Open your web browser and go to `http://localhost:5000` to interact with the coin crawler.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Dependencies](#dependencies)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
+
+## Features
+
+- **New Listings**: Fetches information on newly listed cryptocurrencies.
+- **Most Viewed Cryptos**: Displays the most viewed cryptocurrencies on CoinMarketCap.
+- **Trending Cryptos**: Shows the trending cryptocurrencies.
+- **Top Gainers & Losers**: Lists cryptocurrencies with the largest gains and losses.
+- **Single Coin Data**: Provides detailed information about a single cryptocurrency, including price, 24-hour change, volume, and market data.
+
+---
+
+## Installation
+
+To set up this project on your local machine, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/amiriiw/coin_crawler
+   cd coin_crawler
+   cd Coin-crawler
+   ```
+
+2. **Set up a virtual environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+4. **Run the Flask application**:
+   ```bash
+   python3 app.py
+   ```
+
+The Flask app will start on `http://0.0.0.0:5000`. Visit this URL in your browser to view the application.
+
+---
+
+## Usage
+
+### Web Application
+
+1. **Home Page**: The homepage provides options to view different types of cryptocurrency data.
+2. **Submit Requests**: Choose an option from the dropdown menu, or enter the name of a cryptocurrency to fetch specific data.
+3. **View Data**: The application renders the results in HTML based on the option selected.
+
+### Command-Line Usage
+
+- Run the `all_coins.py` script to scrape various crypto data categories:
+  ```bash
+  python3 backend/all_coins.py <option>
+  ```
+  Replace `<option>` with one of the following:
+  - `new_crypto`
+  - `most_view_crypto`
+  - `trend_crypto`
+  - `gain_and_lose`
+  - `coin_list`
+
+- Run `single_coin.py` for specific cryptocurrency data:
+  ```bash
+  python3 backend/single_coin.py <crypto_name>
+  ```
+  Replace `<crypto_name>` with the name of the cryptocurrency, e.g., `bitcoin`.
+
+---
+
+## File Structure
+
+```plaintext
+Coin-crawler/
+├── app.py                       # Main Flask application
+├── requirements.txt             # Dependencies
+├── backend/
+│   ├── all_coins.py             # Script to scrape various crypto data categories
+│   └── single_coin.py           # Script to scrape data for a specific cryptocurrency
+├── templates/
+│   ├── index.html               # Main page template
+│   ├── <other_templates>.html   # Templates for rendering scraped data
+└── static/                      # Static assets (CSS, JS)
+```
+
+---
+
+## Dependencies
+
+The project relies on the following Python libraries:
+
+- **[Flask](https://flask.palletsprojects.com/)**: Web framework for creating the frontend and API endpoints.
+- **[Scrapy](https://scrapy.org/)**: Web scraping framework to gather cryptocurrency data.
+- **[requests](https://docs.python-requests.org/)**: HTTP library for handling API requests.
+- **[scrapy-splash](https://github.com/scrapy-plugins/scrapy-splash)**: Used for rendering JavaScript-heavy web pages during scraping.
+
+Install these dependencies by running:
+```bash
+pip3 install -r requirements.txt
+```
+
+---
+
+## Documentation
+
+For more detailed information on each library:
+
+- [Flask Documentation](https://flask.palletsprojects.com/)
+- [Scrapy Documentation](https://docs.scrapy.org/)
+- [Requests Documentation](https://docs.python-requests.org/)
+- [Scrapy-Splash Documentation](https://github.com/scrapy-plugins/scrapy-splash)
+
+---
+
+## Contributing
+
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## Acknowledgements
+
+- Data provided by [CoinMarketCap](https://coinmarketcap.com).
+- [Splash](https://github.com/scrapinghub/splash) for JavaScript rendering in Scrapy.
