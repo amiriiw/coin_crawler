@@ -9,8 +9,6 @@
 - [Usage](#usage)
 - [File Structure](#file-structure)
 - [Dependencies](#dependencies)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
